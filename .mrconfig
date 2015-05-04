@@ -1,53 +1,69 @@
 [core]
 checkout = git clone 'git://github.com/Homebrew/homebrew.git' 'core'
+fixups = cd Library/Formula && git retouch --quick
 
 [apache]
 checkout = git clone 'git://github.com/Homebrew/homebrew-apache.git' 'apache'
+fixups = git retouch --quick
 
 [binary]
 checkout = git clone 'git://github.com/Homebrew/homebrew-binary.git' 'binary'
+fixups = git retouch --quick
 
 [boneyard]
 checkout = git clone 'git://github.com/Homebrew/homebrew-boneyard.git' 'boneyard'
+fixups = git retouch --quick
 
 [bundle]
 checkout = git clone 'git://github.com/Homebrew/homebrew-bundle.git' 'bundle'
 
 [completions]
 checkout = git clone 'git://github.com/Homebrew/homebrew-completions.git' 'completions'
+fixups = git retouch --quick
 
 [devel-only]
 checkout = git clone 'git://github.com/Homebrew/homebrew-devel-only.git' 'devel-only'
+fixups = cd Formula && git retouch --quick
 
 [dupes]
 checkout = git clone 'git://github.com/Homebrew/homebrew-dupes.git' 'dupes'
+fixups = git retouch --quick
 
 [games]
 checkout = git clone 'git://github.com/Homebrew/homebrew-games.git' 'games'
+fixups = git retouch --quick
 
 [head-only]
 checkout = git clone 'git://github.com/Homebrew/homebrew-head-only.git' 'head-only'
+fixups = git retouch --quick
 
 [nginx]
 checkout = git clone 'git://github.com/Homebrew/homebrew-nginx.git' 'nginx'
+fixups = git retouch --quick
 
 [php]
 checkout = git clone 'git://github.com/Homebrew/homebrew-php.git' 'php'
+fixups = cd Formula && git retouch --quick
 
 [python]
 checkout = git clone 'git://github.com/Homebrew/homebrew-python.git' 'python'
+fixups = git retouch --quick
 
 [science]
 checkout = git clone 'git://github.com/Homebrew/homebrew-science.git' 'science'
+fixups = git retouch --quick
 
 [services]
 checkout = git clone 'git://github.com/Homebrew/homebrew-services.git' 'services'
 
 [tex]
 checkout = git clone 'git://github.com/Homebrew/homebrew-tex.git' 'tex'
+fixups = git retouch --quick
 
 [versions]
 checkout = git clone 'git://github.com/Homebrew/homebrew-versions.git' 'versions'
+fixups = git retouch --quick
 
 [x11]
 checkout = git clone 'git://github.com/Homebrew/homebrew-x11.git' 'x11'
+fixups = git retouch --quick

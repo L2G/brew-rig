@@ -1,0 +1,53 @@
+[core]
+checkout = git clone 'git://github.com/Homebrew/homebrew.git' 'core'
+
+[apache]
+checkout = git clone 'git://github.com/Homebrew/homebrew-apache.git' 'apache'
+
+[binary]
+checkout = git clone 'git://github.com/Homebrew/homebrew-binary.git' 'binary'
+
+[boneyard]
+checkout = git clone 'git://github.com/Homebrew/homebrew-boneyard.git' 'boneyard'
+
+[bundle]
+checkout = git clone 'git://github.com/Homebrew/homebrew-bundle.git' 'bundle'
+
+[completions]
+checkout = git clone 'git://github.com/Homebrew/homebrew-completions.git' 'completions'
+
+[devel-only]
+checkout = git clone 'git://github.com/Homebrew/homebrew-devel-only.git' 'devel-only'
+
+[dupes]
+checkout = git clone 'git://github.com/Homebrew/homebrew-dupes.git' 'dupes'
+
+[games]
+checkout = git clone 'git://github.com/Homebrew/homebrew-games.git' 'games'
+
+[head-only]
+checkout = git clone 'git://github.com/Homebrew/homebrew-head-only.git' 'head-only'
+
+[nginx]
+checkout = git clone 'git://github.com/Homebrew/homebrew-nginx.git' 'nginx'
+
+[php]
+checkout = git clone 'git://github.com/Homebrew/homebrew-php.git' 'php'
+
+[python]
+checkout = git clone 'git://github.com/Homebrew/homebrew-python.git' 'python'
+
+[science]
+checkout = git clone 'git://github.com/Homebrew/homebrew-science.git' 'science'
+
+[services]
+checkout = git clone 'git://github.com/Homebrew/homebrew-services.git' 'services'
+
+[tex]
+checkout = git clone 'git://github.com/Homebrew/homebrew-tex.git' 'tex'
+
+[versions]
+checkout = git clone 'git://github.com/Homebrew/homebrew-versions.git' 'versions'
+
+[x11]
+checkout = git clone 'git://github.com/Homebrew/homebrew-x11.git' 'x11'

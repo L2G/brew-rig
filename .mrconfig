@@ -1,53 +1,71 @@
 [core]
 checkout = git clone 'git://github.com/Homebrew/homebrew.git' 'core'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [apache]
 checkout = git clone 'git://github.com/Homebrew/homebrew-apache.git' 'apache'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [binary]
 checkout = git clone 'git://github.com/Homebrew/homebrew-binary.git' 'binary'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [boneyard]
 checkout = git clone 'git://github.com/Homebrew/homebrew-boneyard.git' 'boneyard'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [bundle]
 checkout = git clone 'git://github.com/Homebrew/homebrew-bundle.git' 'bundle'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [completions]
 checkout = git clone 'git://github.com/Homebrew/homebrew-completions.git' 'completions'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [devel-only]
 checkout = git clone 'git://github.com/Homebrew/homebrew-devel-only.git' 'devel-only'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [dupes]
 checkout = git clone 'git://github.com/Homebrew/homebrew-dupes.git' 'dupes'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [games]
 checkout = git clone 'git://github.com/Homebrew/homebrew-games.git' 'games'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [head-only]
 checkout = git clone 'git://github.com/Homebrew/homebrew-head-only.git' 'head-only'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [nginx]
 checkout = git clone 'git://github.com/Homebrew/homebrew-nginx.git' 'nginx'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [php]
 checkout = git clone 'git://github.com/Homebrew/homebrew-php.git' 'php'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [python]
 checkout = git clone 'git://github.com/Homebrew/homebrew-python.git' 'python'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [science]
 checkout = git clone 'git://github.com/Homebrew/homebrew-science.git' 'science'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [services]
 checkout = git clone 'git://github.com/Homebrew/homebrew-services.git' 'services'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [tex]
 checkout = git clone 'git://github.com/Homebrew/homebrew-tex.git' 'tex'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [versions]
 checkout = git clone 'git://github.com/Homebrew/homebrew-versions.git' 'versions'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [x11]
 checkout = git clone 'git://github.com/Homebrew/homebrew-x11.git' 'x11'
+update = git fetch --all && git checkout master && git pull --ff-only

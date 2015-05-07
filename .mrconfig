@@ -6,8 +6,8 @@ update = git fetch --all && git checkout master && git pull --ff-only
 [apache]
 checkout = git clone git://github.com/Homebrew/homebrew-apache.git $MR_REPO &&
   rm -fv _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/} &&
-  ln -sv ../../../../${MR_REPO##*/} _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/} &&
-  _core_/bin/brew tap --repair
+  ln -sv ../../../../${MR_REPO##*/} _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/}
+fixups = $MR_REPO/../_core_/bin/brew tap --repair
 update = git fetch --all && git checkout master && git pull --ff-only
 
 [binary]

@@ -27,7 +27,10 @@ checkout = git clone 'git://github.com/Homebrew/homebrew-completions.git' 'compl
 update = git fetch --all && git checkout master && git pull --ff-only
 
 [devel-only]
-checkout = git clone 'git://github.com/Homebrew/homebrew-devel-only.git' 'devel-only'
+checkout = git clone git://github.com/Homebrew/homebrew-devel-only.git $MR_REPO &&
+  rm -fv _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/} &&
+  ln -sv ../../../../${MR_REPO##*/} _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/}
+fixups = $MR_REPO/../_core_/bin/brew tap --repair
 update = git fetch --all && git checkout master && git pull --ff-only
 
 [dupes]

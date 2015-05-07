@@ -1,5 +1,6 @@
-[core]
-checkout = git clone 'git://github.com/Homebrew/homebrew.git' 'core'
+[_core_]
+checkout = git clone git://github.com/Homebrew/homebrew.git $MR_REPO &&
+             mkdir -pv $MR_REPO/Library/Taps/homebrew
 update = git fetch --all && git checkout master && git pull --ff-only
 
 [apache]

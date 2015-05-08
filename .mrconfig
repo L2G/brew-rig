@@ -1,69 +1,66 @@
-[core]
-checkout = git clone 'git://github.com/Homebrew/homebrew.git' 'core'
-fixups = cd Library/Formula && git retouch --quick
+[DEFAULT]
+checkout = git clone git://github.com/Homebrew/homebrew-${MR_REPO##*/}.git $MR_REPO &&
+  rm -fv _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/} &&
+  ln -sv ../../../../${MR_REPO##*/} _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/}
+fixups = $MR_REPO/../_core_/bin/brew tap --repair ; git retouch
+
+[_core_]
+checkout = git clone git://github.com/Homebrew/homebrew.git $MR_REPO &&
+             mkdir -pv $MR_REPO/Library/Taps/homebrew
+update = git fetch --all && git checkout master && git pull --ff-only
+fixups = $MR_REPO/../_core_/bin/brew tap --repair ;
+  find Library/Formula -type f -a -mtime -7 | xargs git retouch
 
 [apache]
-checkout = git clone 'git://github.com/Homebrew/homebrew-apache.git' 'apache'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [binary]
-checkout = git clone 'git://github.com/Homebrew/homebrew-binary.git' 'binary'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [boneyard]
-checkout = git clone 'git://github.com/Homebrew/homebrew-boneyard.git' 'boneyard'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [bundle]
-checkout = git clone 'git://github.com/Homebrew/homebrew-bundle.git' 'bundle'
+update = git fetch --all && git checkout master && git pull --ff-only
+fixups = $MR_REPO/../_core_/bin/brew tap --repair
 
 [completions]
-checkout = git clone 'git://github.com/Homebrew/homebrew-completions.git' 'completions'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [devel-only]
-checkout = git clone 'git://github.com/Homebrew/homebrew-devel-only.git' 'devel-only'
-fixups = cd Formula && git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
+fixups = $MR_REPO/../_core_/bin/brew tap --repair ; cd Formula && git retouch
 
 [dupes]
-checkout = git clone 'git://github.com/Homebrew/homebrew-dupes.git' 'dupes'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [games]
-checkout = git clone 'git://github.com/Homebrew/homebrew-games.git' 'games'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [head-only]
-checkout = git clone 'git://github.com/Homebrew/homebrew-head-only.git' 'head-only'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [nginx]
-checkout = git clone 'git://github.com/Homebrew/homebrew-nginx.git' 'nginx'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [php]
-checkout = git clone 'git://github.com/Homebrew/homebrew-php.git' 'php'
-fixups = cd Formula && git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
+fixups = $MR_REPO/../_core_/bin/brew tap --repair ; cd Formula && git retouch
 
 [python]
-checkout = git clone 'git://github.com/Homebrew/homebrew-python.git' 'python'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [science]
-checkout = git clone 'git://github.com/Homebrew/homebrew-science.git' 'science'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [services]
-checkout = git clone 'git://github.com/Homebrew/homebrew-services.git' 'services'
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [tex]
-checkout = git clone 'git://github.com/Homebrew/homebrew-tex.git' 'tex'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [versions]
-checkout = git clone 'git://github.com/Homebrew/homebrew-versions.git' 'versions'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only
 
 [x11]
-checkout = git clone 'git://github.com/Homebrew/homebrew-x11.git' 'x11'
-fixups = git retouch --quick
+update = git fetch --all && git checkout master && git pull --ff-only

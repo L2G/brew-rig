@@ -8,7 +8,7 @@ fixups = $MR_REPO/../_core_/bin/brew tap --repair
 checkout = git clone git://github.com/Homebrew/homebrew.git $MR_REPO &&
              mkdir -pv $MR_REPO/Library/Taps/homebrew
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups_append = find Library/Formula -type f -a -mtime -7 | xargs git retouch
+fixups_append = find Library/Formula -type f -a -mtime -4 | xargs git retouch
 
 [apache]
 update = git fetch --all && git checkout master && git pull --ff-only
@@ -32,7 +32,7 @@ fixups_append = git retouch
 
 [devel-only]
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups_append = find Formula -type f -a -mtime -7 | xargs git retouch
+fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [dupes]
 update = git fetch --all && git checkout master && git pull --ff-only
@@ -52,7 +52,7 @@ fixups_append = git retouch
 
 [php]
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups_append = find Formula -type f -a -mtime -7 | xargs git retouch
+fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [python]
 update = git fetch --all && git checkout master && git pull --ff-only
@@ -60,7 +60,7 @@ fixups_append = git retouch
 
 [science]
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups_append = find Formula -type f -a -mtime -7 | xargs git retouch
+fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [services]
 update = git fetch --all && git checkout master && git pull --ff-only
@@ -72,7 +72,7 @@ fixups_append = git retouch
 
 [versions]
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups_append = find Formula -type f -a -mtime -7 | xargs git retouch
+fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [x11]
 update = git fetch --all && git checkout master && git pull --ff-only

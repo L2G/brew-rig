@@ -2,65 +2,78 @@
 checkout = git clone git://github.com/Homebrew/homebrew-${MR_REPO##*/}.git $MR_REPO &&
   rm -fv _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/} &&
   ln -sv ../../../../${MR_REPO##*/} _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/}
-fixups = $MR_REPO/../_core_/bin/brew tap --repair ; git retouch
+fixups = $MR_REPO/../_core_/bin/brew tap --repair
 
 [_core_]
 checkout = git clone git://github.com/Homebrew/homebrew.git $MR_REPO &&
              mkdir -pv $MR_REPO/Library/Taps/homebrew
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups = $MR_REPO/../_core_/bin/brew tap --repair ;
-  find Library/Formula -type f -a -mtime -7 | xargs git retouch
+fixups_append = find Library/Formula -type f -a -mtime -7 | xargs git retouch
 
 [apache]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [binary]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [boneyard]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [bundle]
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups = $MR_REPO/../_core_/bin/brew tap --repair
+# no git retouch
 
 [completions]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [devel-only]
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups = $MR_REPO/../_core_/bin/brew tap --repair ; cd Formula && git retouch
+fixups_append = find Formula -type f -a -mtime -7 | xargs git retouch
 
 [dupes]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [games]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [head-only]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [nginx]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [php]
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups = $MR_REPO/../_core_/bin/brew tap --repair ; cd Formula && git retouch
+fixups_append = find Formula -type f -a -mtime -7 | xargs git retouch
 
 [python]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [science]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = find Formula -type f -a -mtime -7 | xargs git retouch
 
 [services]
 update = git fetch --all && git checkout master && git pull --ff-only
+# no git retouch
 
 [tex]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch
 
 [versions]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = find Formula -type f -a -mtime -7 | xargs git retouch
 
 [x11]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = git retouch

@@ -40,6 +40,7 @@ fixups_append = git retouch
 
 [fuse]
 update = git fetch --all && git checkout master && git pull --ff-only
+fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [games]
 update = git fetch --all && git checkout master && git pull --ff-only

@@ -30,6 +30,9 @@ update = git fetch --all && git checkout master && git pull --ff-only
 [dupes]
 update = git fetch --all && git checkout master && git pull --ff-only
 
+[fuse]
+update = git fetch --all && git checkout master && git pull --ff-only
+
 [games]
 update = git fetch --all && git checkout master && git pull --ff-only
 

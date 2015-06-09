@@ -3,63 +3,62 @@ checkout = git clone git://github.com/Homebrew/homebrew-${MR_REPO##*/}.git $MR_R
   rm -fv _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/} &&
   ln -sv ../../../../${MR_REPO##*/} _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/}
 update = git fetch --all && git checkout master && git pull --ff-only
-fixups = $MR_REPO/../_core_/bin/brew tap --repair
 
 [_core_]
 checkout = git clone git://github.com/Homebrew/homebrew.git $MR_REPO &&
              mkdir -pv $MR_REPO/Library/Taps/homebrew
-fixups_append = find Library/Formula -type f -a -mtime -4 | xargs git retouch
+fixups = find Library/Formula -type f -a -mtime -4 | xargs git retouch
 
 [apache]
-fixups_append = git retouch
+fixups = git retouch
 
 [binary]
-fixups_append = git retouch
+fixups = git retouch
 
 [boneyard]
-fixups_append = git retouch
+fixups = git retouch
 
 [bundle]
 # no git retouch
 
 [completions]
-fixups_append = git retouch
+fixups = git retouch
 
 [devel-only]
-fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
+fixups = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [dupes]
-fixups_append = git retouch
+fixups = git retouch
 
 [fuse]
-fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
+fixups = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [games]
-fixups_append = git retouch
+fixups = git retouch
 
 [head-only]
-fixups_append = git retouch
+fixups = git retouch
 
 [nginx]
-fixups_append = git retouch
+fixups = git retouch
 
 [php]
-fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
+fixups = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [python]
-fixups_append = git retouch
+fixups = git retouch
 
 [science]
-fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
+fixups = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [services]
 # no git retouch
 
 [tex]
-fixups_append = git retouch
+fixups = git retouch
 
 [versions]
-fixups_append = find Formula -type f -a -mtime -4 | xargs git retouch
+fixups = find Formula -type f -a -mtime -4 | xargs git retouch
 
 [x11]
-fixups_append = git retouch
+fixups = git retouch

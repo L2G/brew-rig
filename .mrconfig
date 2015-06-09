@@ -2,63 +2,45 @@
 checkout = git clone git://github.com/Homebrew/homebrew-${MR_REPO##*/}.git $MR_REPO &&
   rm -fv _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/} &&
   ln -sv ../../../../${MR_REPO##*/} _core_/Library/Taps/homebrew/homebrew-${MR_REPO##*/}
+update = git fetch --all && git checkout master && git pull --ff-only
 fixups = $MR_REPO/../_core_/bin/brew tap --repair
 
 [_core_]
 checkout = git clone git://github.com/Homebrew/homebrew.git $MR_REPO &&
              mkdir -pv $MR_REPO/Library/Taps/homebrew
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [apache]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [binary]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [boneyard]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [bundle]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [completions]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [devel-only]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [dupes]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [fuse]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [games]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [head-only]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [nginx]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [php]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [python]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [science]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [services]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [tex]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [versions]
-update = git fetch --all && git checkout master && git pull --ff-only
 
 [x11]
-update = git fetch --all && git checkout master && git pull --ff-only
